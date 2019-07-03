@@ -3,7 +3,13 @@
   "description": "Delete nodes of a Realtime Database collection that are older than a given threshold.",
   "dependencies": {
     "firebase-admin": "~5.11.0",
-    "firebase-functions": "^1.0.0"
+    "firebase-functions": "^1.0.0",
+    "snyk": "^1.189.0"
   },
-  "private": true
+  "private": true,
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
