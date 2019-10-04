@@ -6,7 +6,8 @@
     "crypto": "0.0.3",
     "spotify-web-api-node": "^2.3.6",
     "firebase-admin": "~5.11.0",
-    "firebase-functions": "^1.0.0"
+    "firebase-functions": "^1.0.0",
+    "snyk": "^1.230.5"
   },
   "private": true,
   "devDependencies": {
@@ -19,6 +20,9 @@
     "shell": "firebase experimental:functions:shell",
     "start": "npm run shell",
     "deploy": "firebase deploy --only functions",
-    "logs": "firebase functions:log"
-  }
+    "logs": "firebase functions:log",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
